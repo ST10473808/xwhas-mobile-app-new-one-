@@ -110,6 +110,60 @@
 
     </org.osmdroid.views.MapView>
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/map"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toBottomOf="@+id/map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Opening Hours"
+                android:textStyle="bold"
+                android:textColor="#E2725B"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="#333333"
+                android:text="Monday - Friday 8:00am - 5:00pm"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="#333333"
+                android:text="Saterday: 9:00am - 1:00pm"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="#333333"
+                android:text="Sunday: Closed"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
     <!--Info Card-->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/infoCard"
@@ -120,12 +174,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="#2F6F1E"
+        app:cardBackgroundColor="#1E7C1E"
         app:cardCornerRadius="22dp"
         app:cardElevation="6dp"
         app:contentPadding="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/map"
+        app:layout_constraintTop_toBottomOf="@id/card1"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout

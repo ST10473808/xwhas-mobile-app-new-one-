@@ -25,23 +25,23 @@ class ContactDetails : AppCompatActivity() {
 
         map = findViewById(R.id.map)
 
-        // Map style
+
         map.setTileSource(TileSourceFactory.MAPNIK)
 
-        // Zoom controls
+
         map.setMultiTouchControls(true)
 
-        // Camera controller
+
         val mapController = map.controller
         mapController.setZoom(15.0)
 
-        // Location (example: Cape Town)
-        val location = GeoPoint(-33.9249, 18.4241)
 
-        // Center map
+        val location = GeoPoint(-26.107567, 28.056702)
+
+
         mapController.setCenter(location)
 
-        // Marker
+
         val marker = Marker(map)
         marker.position = location
         marker.title = "Port Elizabeth"
