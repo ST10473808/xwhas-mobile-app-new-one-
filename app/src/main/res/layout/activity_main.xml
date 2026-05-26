@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <!--navigation bar-->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:weightSum="5"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/etn_logo" />
+
+
+            <TextView
+                android:id="@+id/home"
+                android:text="HOME"
+                android:textColor="@color/text_hover"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+
+            <TextView
+                android:id="@+id/contact"
+                android:text="CONTACT"
+                android:textColor="@color/text_hover"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+
+            <TextView
+                android:id="@+id/calculate_fees"
+                android:text="CALCULATE FEES"
+                android:textColor="@color/text_hover"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/six_week_course"
+                android:text="SIX      WEEK"
+                android:textColor="@color/text_hover"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/six_month_course"
+                android:text="SIX MONTH"
+                android:textColor="@color/text_hover"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    <!--Makes the screen scrollable-->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- main section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Empower Yourself with New Skills"
+                android:textColor="#E2725B"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/homepage" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Empowering the Nation is dedicated to providing high-quality vocational training that transforms lives. Our mission is to equip individuals with practical skills for domestic and garden work, fostering independence and economic growth within our communities"
+                android:textColor="#333333" />
+
+            <!--dropdown-->
+
+            <TextView
+                android:id="@+id/dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="22dp"
+                android:text="Select a Course"
+                android:textColor="#228B22" />
+
+            <LinearLayout
+                android:id="@+id/dropdown_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EDEDED"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/Six_Month_Course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Six-month Courses"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/Six_Week_Course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Six-week Courses"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

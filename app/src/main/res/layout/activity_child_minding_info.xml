@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Child_Minding_info">
+
+    <!--navigation bar-->
+
+    <LinearLayout
+        android:id="@+id/topMenu"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+        android:weightSum="5"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/home"
+            android:text="HOME"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/contact"
+            android:text="CONTACT DETAILS"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/calculate_fees"
+            android:text="CALCULATE FEES"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/six_week_course"
+            android:text="SIX WEEK COURSE"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/six_month_course"
+            android:text="SIX MONTH COURSE"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toBottomOf="@+id/topMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="400dp"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/childminding" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="Child Minding"
+                        android:textStyle="bold"
+                        android:textColor="#1A6B1A"
+                        android:textSize="20sp"/>
+
+                    <!-- Images goes here-->
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColor="#333333"
+                        android:text="The purpose of this course is to teach enrollees how to provide basic child and baby care. Memebrs will learn practical child minding skills, child development, safety practices, and nutrition basics to become a confident and qualified caregiver."
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <Button
+                android:id="@+id/btn_Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:backgroundTint="#DAA520"
+                android:textColor="#333333"/>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
