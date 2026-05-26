@@ -10,76 +10,92 @@
 
 
     <!--navigation bar-->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:weightSum="5"
 
-<LinearLayout
-android:id="@+id/topMenu"
-android:orientation="horizontal"
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:padding="12dp"
-android:gravity="center_horizontal"
-android:weightSum="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintEnd_toEndOf="parent">
-
-<TextView
-    android:id="@+id/home"
-    android:text="HOME"
-    android:textColor="@color/text_hover"
-    android:clickable="true"
-    android:focusable="true"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="center"/>
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/etn_logo" />
 
 
-<TextView
-    android:id="@+id/contact"
-    android:text="CONTACT DETAILS"
-    android:textColor="@color/text_hover"
-    android:clickable="true"
-    android:focusable="true"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="center"/>
+        <TextView
+            android:id="@+id/home"
+            android:text="HOME"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"/>
 
 
-<TextView
-    android:id="@+id/calculate_fees"
-    android:text="CALCULATE FEES"
-    android:textColor="@color/text_hover"
-    android:clickable="true"
-    android:focusable="true"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="center"/>
+        <TextView
+            android:id="@+id/contact"
+            android:text="CONTACT"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"/>
 
-<TextView
-    android:id="@+id/six_week_course"
-    android:text="SIX WEEK COURSE"
-    android:textColor="@color/text_hover"
-    android:clickable="true"
-    android:focusable="true"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="center"/>
 
-<TextView
-    android:id="@+id/six_month_course"
-    android:text="SIX MONTH COURSE"
-    android:textColor="@color/text_hover"
-    android:clickable="true"
-    android:focusable="true"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    android:gravity="center"/>
+        <TextView
+            android:id="@+id/calculate_fees"
+            android:text="CALCULATE FEES"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/six_week_course"
+            android:text="SIX      WEEK"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/six_month_course"
+            android:text="SIX MONTH"
+            android:textColor="@color/text_hover"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="12sp"/>
 
 </LinearLayout>
 
@@ -91,7 +107,7 @@ app:layout_constraintEnd_toEndOf="parent">
     android:gravity="center_horizontal"
     android:orientation="vertical"
 
-    app:layout_constraintTop_toBottomOf="@+id/topMenu"
+    app:layout_constraintTop_toBottomOf="@+id/topBar"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent">
 
